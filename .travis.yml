@@ -3,4 +3,5 @@ sudo: false
 compiler:
   - clang
   - gcc
-install: python install.py && make
+install: python install.py
+script: make
