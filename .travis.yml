@@ -1,3 +1,6 @@
 language: cpp
 sudo: false
+compiler:
+  - clang
+  - gcc
 install: python install.py && make
