@@ -4,9 +4,11 @@
 
 echo CXX: $1
 
+sudo pg_ctl stop
+
 sudo add-apt-repository -y ppa:h-rayflood/gcc-upper
 sudo apt-get update -qq
-sudo apt-get -o Dpkg::Options::="--force-confnew" upgrade -qq
+sudo apt-get -o Dpkg::Options::="--force-confnew" dist-upgrade -qq
 
 #gcc 4.9
 if [ "$1" == "g++" ]; then
@@ -18,7 +20,7 @@ fi
 if [ "$1" == "clang++" ]; then
     sudo add-apt-repository -y ppa:h-rayflood/llvm-upper
     sudo apt-get update -qq
-    sudo apt-get -o Dpkg::Options::="--force-confnew" upgrade -qq
+    sudo apt-get -o Dpkg::Options::="--force-confnew" dist-upgrade -qq
     sudo apt-get install -qq llvm-3.5
     sudo update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-3.5 90
     clang++ --version
