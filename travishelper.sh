@@ -12,6 +12,9 @@ sudo add-apt-repository -y ppa:h-rayflood/gcc-upper
 sudo apt-get update -qq
 sudo apt-get -o Dpkg::Options::="--force-confnew" dist-upgrade -qq
 
+#install zlib
+sudo apt-get install zlib1g zlib1g-dev
+
 #install gcc 4.9
 if [ "$1" == "g++" ]; then
     sudo apt-get install -qq gcc-4.9 g++-4.9
