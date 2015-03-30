@@ -4,17 +4,18 @@
 
 echo CXX: $1
 
-#gcc 4.8
+sudo add-apt-repository -y ppa:h-rayflood/gcc-upper
+sudo apt-get update -qq
+sudo apt-get dist-upgrade -qq
+
+#gcc 4.9
 if [ "$1" == "g++" ]; then
-    sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
-    sudo apt-get update -qq
-    sudo apt-get install -qq gcc-4.8 g++-4.8
-    sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 90
+    sudo apt-get install -qq gcc-4.9 g++-4.9
+    sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.9 90
 fi
 
-#clang stable
+#clang 3.5
 if [ "$1" == "clang++" ]; then
-    sudo add-apt-repository -y ppa:h-rayflood/gcc-upper
     sudo add-apt-repository -y ppa:h-rayflood/llvm-upper
     sudo apt-get update -qq
     sudo apt-get dist-upgrade -qq
