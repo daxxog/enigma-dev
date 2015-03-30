@@ -1,4 +1,5 @@
 #!/bin/bash
+echo $CXX
 if [ "$CXX" == "g++" ]; then
     sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
     sudo apt-get update -qq
