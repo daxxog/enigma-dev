@@ -4,15 +4,13 @@
 
 echo CXX: $1
 
-sudo rm /etc/rsyslog.conf
-
 sudo add-apt-repository -y ppa:h-rayflood/gcc-upper
 sudo apt-get update -qq
 sudo apt-get -o Dpkg::Options::="--force-confnew" dist-upgrade -qq
 
 #gcc 4.9
 if [ "$1" == "g++" ]; then
-    sudo  apt-get install -qq gcc-4.9 g++-4.9
+    sudo apt-get install -qq gcc-4.9 g++-4.9
     sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.9 90
 fi
 
