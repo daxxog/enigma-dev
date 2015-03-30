@@ -1,3 +1,3 @@
 [submodule "LateralGM"]
 	path = LateralGM
-	url = git@github.com:IsmAvatar/LateralGM.git
+	url = https://github.com/IsmAvatar/LateralGM.git
