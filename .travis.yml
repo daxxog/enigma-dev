@@ -3,7 +3,7 @@ compiler:
   - gcc
   - clang
 before_install:
-  - sudo bash travishelper.sh
+  - sudo bash travishelper.sh $CXX
 install:
   - python install.py
 script: make
