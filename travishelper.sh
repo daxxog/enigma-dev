@@ -12,13 +12,10 @@ if [ "$1" == "g++" ]; then
     sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 90
 fi
 
-#clang 3.5
+#clang stable
 if [ "$1" == "clang++" ]; then
-    sudo apt-get update
-    sudo echo deb http://llvm.org/apt/precise/ llvm-toolchain-precise main >> /etc/apt/sources.list
-    sudo echo deb-src http://llvm.org/apt/precise/ llvm-toolchain-precise main >> /etc/apt/sources.list
-    sudo apt-get update
-    apt-get install clang-3.7 lldb-3.7
-    cat /etc/apt/sources.list
-    ls /usr/bin
+    sudo add-apt-repository -y ppa:h-rayflood/llvm-upper
+    sudo apt-get update -qq
+    sudo apt-get install -qq llvm-3.5
+    clang --version
 fi
