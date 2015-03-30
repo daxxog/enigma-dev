@@ -20,5 +20,6 @@ if [ "$1" == "clang++" ]; then
     sudo apt-get update -qq
     sudo apt-get dist-upgrade -qq
     sudo apt-get install -qq -y llvm-3.5
-    clang --version
+    sudo update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-3.5 90
+    clang++ --version
 fi
