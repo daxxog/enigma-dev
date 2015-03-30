@@ -10,7 +10,7 @@ sudo apt-get dist-upgrade -qq
 
 #gcc 4.9
 if [ "$1" == "g++" ]; then
-    sudo apt-get install -qq gcc-4.9 g++-4.9
+    sudo apt-get install -qq -y gcc-4.9 g++-4.9
     sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.9 90
 fi
 
@@ -19,6 +19,6 @@ if [ "$1" == "clang++" ]; then
     sudo add-apt-repository -y ppa:h-rayflood/llvm-upper
     sudo apt-get update -qq
     sudo apt-get dist-upgrade -qq
-    sudo apt-get install -qq llvm-3.5
+    sudo apt-get install -qq -y llvm-3.5
     clang --version
 fi
