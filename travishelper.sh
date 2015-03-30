@@ -4,7 +4,8 @@
 
 echo CXX: $1
 
-dpkg -l | grep postgres
+#remove postgresql
+sudo apt-get --purge remove postgresql-9.1 postgresql-9.1-postgis-2.1 postgresql-9.1-postgis-scripts postgresql-9.2 postgresql-9.2-postgis-2.1 postgresql-9.2-postgis-scripts postgresql-9.3 postgresql-9.3-postgis-2.1 postgresql-9.3-postgis-scripts postgresql-9.4 postgresql-9.4-postgis-2.1 postgresql-9.4-postgis-scripts postgresql-client postgresql-client-9.1 postgresql-client-9.2 postgresql-client-9.3 postgresql-client-9.4 postgresql-client-common postgresql-common postgresql-contrib-9.2 postgresql-contrib-9.3 postgresql-contrib-9.4
 
 sudo add-apt-repository -y ppa:h-rayflood/gcc-upper
 sudo apt-get update -qq
