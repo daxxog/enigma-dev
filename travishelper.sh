@@ -4,7 +4,7 @@
 
 echo CXX: $1
 
-sudo pg_ctl stop
+dpkg -l | grep postgres
 
 sudo add-apt-repository -y ppa:h-rayflood/gcc-upper
 sudo apt-get update -qq
