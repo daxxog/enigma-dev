@@ -1,0 +1,6 @@
+language: cpp
+compiler:
+  - clang
+  - gcc
+install: python install.py
+script: make
