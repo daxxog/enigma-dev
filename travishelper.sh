@@ -15,12 +15,10 @@ fi
 #clang 3.5
 if [ "$1" == "clang++" ]; then
     sudo apt-get update
-    sudo echo deb http://llvm.org/apt/precise/ llvm-toolchain-precise-3.5 main >> /etc/apt/sources.list
-    sudo echo deb-src http://llvm.org/apt/precise/ llvm-toolchain-precise-3.5 main >> /etc/apt/sources.list
-    sudo echo deb http://ppa.launchpad.net/ubuntu-toolchain-r/test/ubuntu precise main >> /etc/apt/sources.list
-    wget -O - http://llvm.org/apt/llvm-snapshot.gpg.key | sudo apt-key add -
+    sudo echo deb http://llvm.org/apt/precise/ llvm-toolchain-precise main >> /etc/apt/sources.list
+    sudo echo deb-src http://llvm.org/apt/precise/ llvm-toolchain-precise main >> /etc/apt/sources.list
     sudo apt-get update
-    apt-get install clang-3.5 lldb-3.5
+    apt-get install clang-3.7 lldb-3.7
     cat /etc/apt/sources.list
     ls /usr/bin
 fi
