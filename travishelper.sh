@@ -25,4 +25,5 @@ if [ "$1" == "clang++" ]; then
     sudo apt-get -o Dpkg::Options::="--force-confnew" dist-upgrade -qq
     sudo apt-get install -qq clang-3.5
     sudo update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-3.5 90
+    sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/clang++-3.5 90
 fi
